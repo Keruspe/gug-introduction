@@ -1,5 +1,6 @@
 These are the slides for the first edition of the #gug (git user group)
-Type make to build them
+
+Type make to build them (you will need latex-beamer, pdflatex and of course make)
 
 check http://www.atlantic2.org/index.php?mact=News,cntnt01,detail,0&cntnt01articleid=264&cntnt01returnid=34
 
