@@ -3,10 +3,10 @@
 \usecolortheme{beaver}
 \usepackage{graphicx}
 
-\title{Git user group \#1}
+\title{Git introduction for n00bs}
 \subtitle{Introduction to git}
-\author[Keruspe]{Marc-Antoine Perennou}
-\institute[CC]{Clever Cloud}
+\author[Keruspe \and Judu]{Marc-Antoine Perennou \and Julien Durillon}
+\institute[CC]{Clever Cloud -- http://www.clever-cloud.com/}
 \date{}
 
 \begin{document}
@@ -15,23 +15,23 @@
     \titlepage
 \end{frame}
 
-\begin{frame}{Who I am}
-    Marc-Antoine Perennou - \includegraphics[width=80px,height=30px]{logo-cc.png} \\
-    \ \\
-    \ \\
-    \hrule
-    \ \\
-    \ \\
-    Marc-Antoine@Perennou.com \\
-    marc-antoine.perennou@clever-cloud.com \\
-    \ \\
-    \ \\
-    \hrule
-    \ \\
-    \ \\
-    http://clever-cloud.com/ \\
-    @Keruspe on twitter and identi.ca \\
-    http://github.com/Keruspe
+\begin{frame}{Who we are}
+      Marc-Antoine Perennou - \includegraphics[width=80px,height=30px]{logo-cc.png} \\[0.5cm]
+      \hrule \hfill \\[0.5cm]
+      Marc-Antoine@Perennou.com \\
+      marc-antoine.perennou@clever-cloud.com \\[0.5cm]
+      \hrule \hfill \\[0.5cm]
+      @Keruspe on twitter and identi.ca \\
+      http://github.com/Keruspe
+\end{frame}
+\begin{frame}{Who we are}
+      Julien Durillon - \includegraphics[width=80px,height=30px]{logo-cc.png} \\[0.5cm]
+      \hrule \hfill \\[0.5cm]
+      julien.durillon@gmail.com \\
+      julien.durillon@clever-cloud.com \\[0.5cm]
+      \hrule \hfill \\[0.5cm]
+      @juuduu on twitter \\
+      http://github.com/judu
 \end{frame}
 
 \begin{frame}{The (D)VCS concept}
@@ -42,9 +42,32 @@
         \pause
         \item Why should you consider using or switching to a Distributed VCS ?
     \end{itemize}
-    \includegraphics[width=130pt,height=100pt]{VCS.png} \ \vrule \ \
-    \includegraphics[width=130pt,height=100pt]{DVCS.png} \\
-    \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VCS\ \ \ \ \ \ \ \ \ \ \ \ VS\ \ \ \ \ \ \ \ \ \ \ \ \ \ DVCS
+    \begin{minipage}{0.4\textwidth}
+    \begin{flushleft}
+    \includegraphics[width=\textwidth]{VCS.png}
+    \end{flushleft}
+    \end{minipage}
+    \hfill\vrule\hfill
+    \begin{minipage}{0.4\textwidth}
+    \begin{flushright}
+    \includegraphics[width=\textwidth]{DVCS.png}
+    \end{flushright}
+    \end{minipage}\\[0.2cm]
+    \begin{minipage}{0.2\textwidth}
+    \begin{flushright}
+    VCS
+    \end{flushright}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+    \begin{center}
+    VS
+    \end{center}
+    \end{minipage}\hfill 
+    \begin{minipage}{0.2\textwidth}
+    \begin{flushleft}
+    DVCS
+    \end{flushleft}
+    \end{minipage}
 \end{frame}
 
 \begin{frame}{The origin of Git}
@@ -68,6 +91,34 @@
     \ \\
     \ \\
     \includegraphics[width=250pt,height=110pt]{fileinit.png}
+\end{frame}
+
+\begin{frame}{But\dots what's in .git?}
+\begin{itemize}
+   \item Full repository\pause
+   \item \emph{i.e.}:
+      \begin{itemize}
+         \item full commit history
+         \item all objects since the project beginning
+         \item all local and shared branches
+         \item all tags
+         \item registered remotes
+      \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{But\dots what's a commit?}
+   \begin{itemize}
+      \item Author \onslide<2->{ -- The one who wrote the code}
+      \item Commiter \onslide<3->{ -- The one who created the commit object}
+      \item Parent \onslide<4->{ -- The commit(s) before this one}
+      \item Tree \onslide<5->{ -- The top tree object of the commited state}
+      \item Message \onslide<6->{ -- Why the commit was done}
+   \end{itemize}
+ 
+   \begin{center}
+      \includegraphics[width=0.5\textwidth]{commit-object.png}
+   \end{center}
 \end{frame}
 
 \begin{frame}{Basic usage}
@@ -117,6 +168,17 @@
     \includegraphics[width=300pt,height=130pt]{branches.png}
 \end{frame}
 
+\begin{frame}{But\dots what's a branch?}
+   \begin{itemize}
+      \item Just a reference\dots\pause
+      \item on a commit\dots\pause
+      \item that is updated by the \emph{commit} command.
+   \end{itemize}
+   \begin{center}
+   \includegraphics[width=0.5\textwidth]{branches-inside.png}
+   \end{center}
+\end{frame}
+
 \begin{frame}{Advanced usage}
     \begin{itemize}
         \item Rebasing with git rebase / git pull --rebase
@@ -134,18 +196,16 @@
 \end{frame}
 
 \begin{frame}{Demos}
-    \begin{itemize}
-        \item Failing merge
-        \pause
-        \item Successfull merge
-        \pause
-        \item paludis patches
-        \pause
-        \item play patches
-        \pause
-        \item Backporting changes
-    \end{itemize}
+   \begin{itemize}
+      \item Failing merge
+      \pause
+      \item Successfull fast-forwarding merge
+      \pause
+      \item Backporting changes
+   \end{itemize}
+\end{frame}
+
+\begin{frame}{Questions?}
 \end{frame}
 
 \end{document}
-
