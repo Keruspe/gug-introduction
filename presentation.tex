@@ -3,7 +3,7 @@
 \usecolortheme{beaver}
 \usepackage{graphicx}
 
-\title{Git introduction for n00bs}
+\title{Git introduction for beginners}
 \subtitle{Get off, mercurial users}
 \author[Keruspe \and Judu]{Marc-Antoine Perennou \and Julien Durillon}
 \institute[CC]{Clever Cloud -- http://www.clever-cloud.com/}
@@ -36,11 +36,11 @@
 
 \begin{frame}{The (D)VCS concept}
     \begin{itemize}
-        \item What is a Version Control System ?
+        \item What is a Version Control System?
         \pause
-        \item Why must you use one if you do not do so already ?
+        \item Why must you use one?
         \pause
-        \item Why should you consider using or switching to a Distributed VCS ?
+        \item Why should you consider using or switching to a Distributed VCS?
     \end{itemize}
     \begin{minipage}{0.4\textwidth}
     \begin{flushleft}
@@ -103,6 +103,7 @@
          \item all local and shared branches
          \item all tags
          \item registered remotes
+         \item hooks (useful for CI)
       \end{itemize}
 \end{itemize}
 \end{frame}
@@ -146,9 +147,9 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Some usefull basics}
+\begin{frame}{Some useful basics}
     \begin{itemize}
-        \item Explanations on the tracking system
+        \item Explanations on the tracking system (diff VS file)
         \pause
         \item Configuration
         \pause
@@ -181,7 +182,9 @@
 
 \begin{frame}{Advanced usage}
     \begin{itemize}
-        \item Rebasing with git rebase / git pull --rebase
+        \item Rebasing with git rebase / git pull -{}-rebase
+        \pause
+        \item Rearranging your commits
         \pause
         \item Patching with git format-patch and git am
         \pause
